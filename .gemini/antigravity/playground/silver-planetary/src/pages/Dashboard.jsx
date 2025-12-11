@@ -86,8 +86,32 @@ export default function Dashboard() {
     const expiredCount = products.filter(p => getExpiryStatus(calculateDaysRemaining(p.expiry_date)) === 'expired').length;
     const criticalCount = products.filter(p => getExpiryStatus(calculateDaysRemaining(p.expiry_date)) === 'critical').length;
 
-    // Low Stock Logic
-    const lowStockProducts = products.filter(p => p.stock <= (p.min_stock || 5));
+    // Low Stock Logic - FIXED: Aggregate by code first
+    const stockByCode = {};
+    products.forEach(product => {
+        if (!stockByCode[product.code]) {
+            stockByCode[product.code] = {
+                ...product,
+                totalStock: 0
+            };
+        }
+        stockByCode[product.code].totalStock += (product.stock || 0);
+    });
+
+    const lowStockProducts = Object.values(stockByCode)
+        .filter(item => {
+            const minStock = item.min_stock || 10;
+            return item.totalStock <= minStock;
+        })
+        .map(item => ({
+            id: item.code,
+            name: item.name,
+            presentation: item.presentation,
+            lab: item.lab,
+            stock: item.totalStock,
+            min_stock: item.min_stock || 10
+        }));
+
     const lowStockCount = lowStockProducts.length;
 
     return (

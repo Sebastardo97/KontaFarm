@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Activity, Lock, Mail, ArrowRight } from 'lucide-react';
 
 export default function Login() {
+    console.log('🎨 KontaFarm Login v2.0 - New Design Loaded');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);

@@ -74,7 +74,7 @@ export default function Layout({ children }) {
             </aside>
 
             {/* Main Content */}
-            <main className="flex-1 md:ml-64 md:pl-2 p-8 overflow-y-auto h-full relative" style={{ zIndex: 1 }}>
+            <main className="flex-1 md:ml-72 p-8 overflow-y-auto h-full relative" style={{ zIndex: 1 }}>
                 {children}
             </main>
         </div>

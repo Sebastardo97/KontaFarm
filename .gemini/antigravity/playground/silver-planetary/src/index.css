@@ -13,19 +13,31 @@
 
   --color-text-main: #f8fafc;
   --color-text-muted: #94a3b8;
+}
 
-  --color-status-success: #22c55e;
-  --color-status-warning: #eab308;
-  --color-status-danger: #ef4444;
+/* Fix Autofill Background & Text Color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgba(30, 41, 59, 0.8) inset !important;
+  -webkit-text-fill-color: white !important;
+  caret-color: white !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
 
-  --glass-bg: rgba(30, 41, 59, 0.95);
-  /* More opaque for modal */
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+--color-status-success: #22c55e;
+--color-status-warning: #eab308;
+--color-status-danger: #ef4444;
 
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
+--glass-bg: rgba(30, 41, 59, 0.95);
+/* More opaque for modal */
+--glass-border: rgba(255, 255, 255, 0.1);
+--glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+--radius-sm: 8px;
+--radius-md: 12px;
+--radius-lg: 16px;
 }
 
 body {

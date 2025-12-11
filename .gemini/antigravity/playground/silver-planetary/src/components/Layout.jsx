@@ -34,8 +34,8 @@ export default function Layout({ children }) {
     return (
         <div className="flex h-screen bg-slate-900 text-slate-100 overflow-hidden">
             {/* Sidebar */}
-            <aside className="w-64 fixed h-full glass-panel border-r border-slate-800/50 hidden md:flex flex-col p-6 z-10"
-                style={{ background: 'var(--color-bg-card)' }}>
+            <aside className="w-64 fixed h-full glass-panel border-r border-slate-800/50 hidden md:flex flex-col p-6"
+                style={{ background: 'var(--color-bg-card)', zIndex: 5 }}>
                 <div className="mb-10 flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center">
                         <Activity className="text-white" size={20} />
@@ -74,7 +74,7 @@ export default function Layout({ children }) {
             </aside>
 
             {/* Main Content */}
-            <main className="flex-1 md:ml-64 p-8 overflow-y-auto h-full">
+            <main className="flex-1 md:ml-64 md:pl-2 p-8 overflow-y-auto h-full relative" style={{ zIndex: 1 }}>
                 {children}
             </main>
         </div>

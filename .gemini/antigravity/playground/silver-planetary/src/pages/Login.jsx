@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Activity, Lock, Mail, ArrowRight } from 'lucide-react';
 
 export default function Login() {
-    console.log('🎨 KontaFarm Login v2.0 - New Design Loaded');
+    console.log('🚀 KontaFarm Login v3.0 - Tailwind Restoration Deploy');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
@@ -31,7 +31,7 @@ export default function Login() {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white p-4 relative overflow-hidden">
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white p-4 relative overflow-hidden" style={{ backgroundColor: '#0f172a' }}>
             {/* Animated Background Orbs */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
                 <div className="absolute -top-32 -left-32 w-96 h-96 bg-emerald-500/20 rounded-full blur-[120px] animate-pulse"></div>
@@ -41,7 +41,7 @@ export default function Login() {
 
             <div className="w-full max-w-md relative z-10">
                 {/* Glassmorphic Card */}
-                <div className="bg-slate-900/60 backdrop-blur-2xl border border-white/10 rounded-3xl shadow-2xl overflow-hidden">
+                <div className="bg-slate-900/60 backdrop-blur-2xl border border-white/10 rounded-3xl shadow-2xl overflow-hidden" style={{ backgroundColor: 'rgba(15, 23, 42, 0.8)' }}>
 
                     {/* Header with Logo */}
                     <div className="p-10 pb-6 text-center">

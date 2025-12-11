@@ -79,7 +79,6 @@ export default function Login() {
                                     placeholder="usuario@konta.com"
                                     style={{ color: 'white' }}
                                 />
-                                <div className="absolute inset-0 rounded-xl ring-2 ring-emerald-400/0 group-focus-within:ring-emerald-400/20 transition-all pointer-events-none"></div>
                             </div>
                         </div>
 
@@ -99,7 +98,6 @@ export default function Login() {
                                     placeholder="••••••••"
                                     style={{ color: 'white' }}
                                 />
-                                <div className="absolute inset-0 rounded-xl ring-2 ring-emerald-400/0 group-focus-within:ring-emerald-400/20 transition-all pointer-events-none"></div>
                             </div>
                         </div>
 

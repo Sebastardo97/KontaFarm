@@ -90,9 +90,10 @@ export default function DispenseModal({ product: initialProduct, onClose }) {
         const term = codeToSearch.toLowerCase().trim();
 
         // Find ALL matches (by Code OR Lot)
+        // AND ensure they have stock > 0 (Logic implemented per user request "El lote si se agota no deberia seguir en el inventario")
         const matches = products.filter(p =>
-            p.code.toLowerCase() === term ||
-            p.lot.toLowerCase().includes(term)
+            (p.code.toLowerCase() === term || p.lot.toLowerCase().includes(term)) &&
+            p.stock > 0
         );
 
         if (matches.length === 0) {
